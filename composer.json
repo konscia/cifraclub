@@ -1,0 +1,18 @@
+{
+    "name": "konscia/cifraclub",
+    "authors": [
+        {
+            "name": "Kaléu Caminha",
+            "email": "kaleu.caminha@gmail.com"
+        }
+    ],
+    "require": {
+        "voku/simple_html_dom": "^3.1",
+        "tedivm/stash": "^0.14.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Konscia\\CifraClub\\": "src/"
+        }
+    }
+}
