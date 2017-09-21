@@ -40,11 +40,17 @@ class BuscaMusicas
 
         $dom = HtmlDomParser::file_get_html($url);
 
-        $links = $dom->find('.art_music-link');
+        $links = $dom->find('ul.list-links.art_musics.alf.all a.art_music-link');
 
         $musicas = [];
         foreach ($links as $link) {
             $urlMusica = $link->getAttribute('href');
+
+            if(strstr($urlMusica, "#") or strstr($urlMusica, "letra")) {
+                echo "Descartada: {$urlMusica}\n";
+                continue;
+            }
+
             $acordes = $this->buscadorAcordes->buscaPorMusica($urlMusica);
             $musicas[] = new Musica($link->innerHtml, $urlMusica, $acordes);
         }

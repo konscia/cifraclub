@@ -19,7 +19,7 @@ class BuscaAcordes
 
     public function buscaPorMusica($urlMusica) : Acordes
     {
-        $url = "https://www.cifraclub.com.br/{$urlMusica}";
+        $url = "https://www.cifraclub.com.br{$urlMusica}";
         $item = $this->cache->getItem($urlMusica);
 
         echo "Pesquisando Música: {$url}\n";
