@@ -4,26 +4,24 @@ namespace Konscia\CifraClub\Application;
 
 use Konscia\CifraClub\Domain\Exceptions\ArtistNotFound;
 use Konscia\CifraClub\Domain\Repositories\ArtistsRepository;
+use Konscia\CifraClub\Domain\Services\ArtistLocator;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
 
 class EasyMusicFinder
 {
     /**
-     * @var ArtistsRepository
+     * @var ArtistLocator
      */
-    private $artistsRepository;
+    private $artistLocator;
 
-    public function __construct(ArtistsRepository $artistsRepository)
+    public function __construct(ArtistLocator $artistLocator)
     {
-        $this->artistsRepository = $artistsRepository;
+        $this->artistLocator = $artistLocator;
     }
 
     public function findByArtistSloganAndNumberOfChords(Slug $artist, int $maxChords)
     {
-        $artistEntity = $this->artistsRepository->findBySlug($artist);
-        if ($artistEntity === null) {
-            throw new ArtistNotFound($artist);
-        }
+        $artistEntity = $this->artistLocator->findBySlug($artist);
 
         //Busca Musicas do Artista com Acordes
 

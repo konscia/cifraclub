@@ -3,6 +3,7 @@
 namespace Konscia\CifraClub\Infrastructure;
 
 use Konscia\CifraClub\Domain\CifraClubProxyInterface;
+use Konscia\CifraClub\Domain\Exceptions\ArtistNotFound;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
 use voku\helper\HtmlDomParser;
 use voku\helper\SimpleHtmlDomNodeBlank;
@@ -16,7 +17,7 @@ class CifraClubProxyImpl implements CifraClubProxyInterface
 
         $elementWithArtistName = $dom->getElementById("span_bread");
         if ($elementWithArtistName instanceof SimpleHtmlDomNodeBlank) {
-            throw new \InvalidArgumentException("Não foi encontrada página para o artista: {$artist}");
+            throw new ArtistNotFound($artist);
         }
 
         return $dom;

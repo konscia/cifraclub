@@ -1,29 +1,29 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\Repositories;
+namespace Konscia\CifraClub\Domain\Services;
 
-use Konscia\CifraClub\Domain\Entities\Artist;
+use Konscia\CifraClub\Domain\ValueObjects\Artist;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
 use Konscia\CifraClub\Infrastructure\CifraClubProxyImpl;
 use PHPUnit\Framework\TestCase;
 
-class ArtistsRepositoryTest extends TestCase
+class ArtistLocatorTest extends TestCase
 {
     /**
-     * @var ArtistsRepository
+     * @var ArtistLocator
      */
-    private $repository;
+    private $service;
 
     protected function setUp()
     {
-        $this->repository = new ArtistsRepository(
+        $this->service = new ArtistLocator(
             new CifraClubProxyImpl()
         );
     }
 
     public function testfindBySlugSuccess()
     {
-        $artist = $this->repository->findBySlug(new Slug('lulu-santos'));
+        $artist = $this->service->findBySlug(new Slug('lulu-santos'));
         self::assertInstanceOf(Artist::class, $artist);
         self::assertEquals($artist->getName(), "Lulu Santos");
     }

@@ -1,8 +1,7 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\Entities;
+namespace Konscia\CifraClub\Domain\ValueObjects;
 
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
 use voku\helper\HtmlDomParser;
 
 class Artist
