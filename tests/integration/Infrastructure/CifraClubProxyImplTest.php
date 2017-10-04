@@ -3,6 +3,7 @@
 namespace Konscia\CifraClub\Infrastructure;
 
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
+use Konscia\CifraClub\Domain\Exceptions\ArtistNotFound;
 use PHPUnit\Framework\TestCase;
 
 class CifraClubProxyImplTest extends TestCase
@@ -26,7 +27,7 @@ class CifraClubProxyImplTest extends TestCase
 
     public function testGetArtistPageError()
     {
-        self::expectException(\InvalidArgumentException::class);
+        self::expectException(ArtistNotFound::class);
         $this->proxy->getArtistPage(new Slug("lulu-santoss"));
     }
 }

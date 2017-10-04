@@ -2,30 +2,22 @@
 
 namespace Konscia\CifraClub\Domain\ValueObjects;
 
-use voku\helper\HtmlDomParser;
-
 class Artist
 {
-    /**
-     * @var string
-     */
-    private $name;
-
     /**
      * @var Slug
      */
     private $slug;
 
     /**
-     * @var HtmlDomParser
+     * @var string
      */
-    private $htmlPage;
+    private $name;
 
-    public function __construct(Slug $slug, HtmlDomParser $htmlPage)
+    public function __construct(Slug $slug, string $name)
     {
-        $this->name = $htmlPage->getElementById("span_bread")->innerHtml;
+        $this->name = $name;
         $this->slug = $slug;
-        $this->htmlPage = $htmlPage;
     }
 
     public function getName(): string
@@ -36,10 +28,5 @@ class Artist
     public function getSlug(): Slug
     {
         return $this->slug;
-    }
-
-    public function getHtmlPage(): HtmlDomParser
-    {
-        return $this->htmlPage;
     }
 }

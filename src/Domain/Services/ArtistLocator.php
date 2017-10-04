@@ -3,7 +3,7 @@
 namespace Konscia\CifraClub\Domain\Services;
 
 use Konscia\CifraClub\Domain\CifraClubProxyInterface;
-use Konscia\CifraClub\Domain\Exceptions\ArtistNotFound;
+use Konscia\CifraClub\Domain\Factories\ArtistFactory;
 use Konscia\CifraClub\Domain\ValueObjects\Artist;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
 use Stash\Interfaces\PoolInterface;
@@ -16,31 +16,35 @@ class ArtistLocator
     private $cifraClubProxy;
 
     /**
+     * @var ArtistFactory
+     */
+    private $factory;
+
+    /**
      * @var PoolInterface
      */
     private $cache;
 
-    public function __construct(CifraClubProxyInterface $cifraClubProxy, PoolInterface $cache)
-    {
+    public function __construct(
+        CifraClubProxyInterface $cifraClubProxy,
+        ArtistFactory $factory,
+        PoolInterface $cache
+    ) {
         $this->cifraClubProxy = $cifraClubProxy;
+        $this->factory = $factory;
         $this->cache = $cache;
     }
 
-    /**
-     * @param Slug $artist
-     * @return Artist
-     */
-    public function findBySlug(Slug $artist)
+    public function findBySlug(Slug $slug) : Artist
     {
-        $key = 'artist.'.$artist;
-        $item = $this->cache->getItem($key);
+        $item = $this->cache->getItem('artist.'.$slug);
 
         if($item->isHit()) {
             return $item->get();
         }
 
-        $page = $this->cifraClubProxy->getArtistPage($artist);
-        $artist = new Artist($artist, $page);
+        $page = $this->cifraClubProxy->getArtistPage($slug);
+        $artist = $this->factory->createFromSlugAndHtmlCifraClub($slug, $page);
 
         $item->set($artist);
         $item->expiresAfter(new \DateInterval('P1M'));
