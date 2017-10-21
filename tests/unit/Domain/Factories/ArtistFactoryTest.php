@@ -2,7 +2,7 @@
 
 namespace Konscia\CifraClub\Domain\Factories;
 
-use Konscia\CifraClub\Domain\ValueObjects\Artist;
+use Konscia\CifraClub\Domain\Entities\Artist;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
 use PHPUnit\Framework\TestCase;
 use voku\helper\HtmlDomParser;

@@ -4,7 +4,7 @@ namespace Konscia\CifraClub\Domain\Services;
 
 use Konscia\CifraClub\Domain\CifraClubProxyInterface;
 use Konscia\CifraClub\Domain\Factories\ArtistFactory;
-use Konscia\CifraClub\Domain\ValueObjects\Artist;
+use Konscia\CifraClub\Domain\Entities\Artist;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
 use PHPUnit\Framework\TestCase;
 use Stash\Driver\Ephemeral;

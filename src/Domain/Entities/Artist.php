@@ -1,6 +1,8 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\ValueObjects;
+namespace Konscia\CifraClub\Domain\Entities;
+
+use Konscia\CifraClub\Domain\ValueObjects\Slug;
 
 class Artist
 {
