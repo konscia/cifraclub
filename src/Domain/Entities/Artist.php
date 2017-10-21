@@ -16,10 +16,16 @@ class Artist
      */
     private $name;
 
-    public function __construct(Slug $slug, string $name)
+    /**
+     * @var Music[]
+     */
+    private $musics;
+
+    public function __construct(Slug $slug, string $name, array $musics = [])
     {
         $this->name = $name;
         $this->slug = $slug;
+        $this->musics = $musics;
     }
 
     public function getName(): string
@@ -30,5 +36,13 @@ class Artist
     public function getSlug(): Slug
     {
         return $this->slug;
+    }
+
+    /**
+     * @return Music[]
+     */
+    public function getMusics(): array
+    {
+        return $this->musics;
     }
 }
