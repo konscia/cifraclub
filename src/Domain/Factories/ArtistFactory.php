@@ -9,9 +9,10 @@ use voku\helper\HtmlDomParser;
 
 class ArtistFactory
 {
-    public function createFromSlugAndHtmlCifraClub(Slug $artist, HtmlDomParser $html)
+    public function createFromSlugAndHtmlCifraClub(Slug $artistSlug, HtmlDomParser $html)
     {
         $name = $html->getElementById("span_bread")->innerHtml;
+        $artist = new Artist($artistSlug, $name);
 
         $musicLinks = $html->find('ol.list-links.art_musics.all a.art_music-link');
         $musics = [];
@@ -25,9 +26,11 @@ class ArtistFactory
             $urlSlices = explode("/", trim($url, "/"));
             $slug = $urlSlices[1];
 
-            $musics[] = new Music(new Slug($slug), $link->innerHtml());
+            $musics[] = new Music($artist, new Slug($slug), $link->innerHtml());
         }
 
-        return new Artist($artist, $name, $musics);
+        $artist->setMusics($musics);
+
+        return $artist;
     }
 }

@@ -13,4 +13,20 @@ class ArtistTest extends TestCase
         self::assertSame('artista', (string)$artist->getSlug());
         self::assertSame('Artista', $artist->getName());
     }
+
+    public function testMusics()
+    {
+        $artist = new Artist(new Slug("artista"), "Artista");
+
+        $musics = [
+            new Music($artist, new Slug('m'), "M"),
+            new Music($artist, new Slug('m2'), "M2"),
+        ];
+
+        self::assertCount(0, $artist->getMusics());
+        $artist->setMusics($musics);
+        self::assertSame($musics, $artist->getMusics());
+
+
+    }
 }

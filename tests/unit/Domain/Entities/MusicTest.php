@@ -9,8 +9,10 @@ class MusicTest extends TestCase
 {
     public function testConstructor()
     {
-        $music = new Music(new Slug("musica"), "Música");
+        $artist = new Artist(new Slug('a'), "A");
+        $music = new Music($artist, new Slug("musica"), "Música");
         self::assertSame('musica', (string)$music->getSlug());
         self::assertSame('Música', $music->getName());
+        self::assertSame($artist, $music->getArtist());
     }
 }

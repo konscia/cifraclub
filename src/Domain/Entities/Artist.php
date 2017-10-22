@@ -19,12 +19,19 @@ class Artist
     /**
      * @var Music[]
      */
-    private $musics;
+    private $musics = [];
 
-    public function __construct(Slug $slug, string $name, array $musics = [])
+    public function __construct(Slug $slug, string $name)
     {
         $this->name = $name;
         $this->slug = $slug;
+    }
+
+    /**
+     * @param Music[] $musics
+     */
+    public function setMusics(array $musics)
+    {
         $this->musics = $musics;
     }
 
