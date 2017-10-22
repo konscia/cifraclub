@@ -37,8 +37,9 @@ class ArtistLocatorTest extends TestCase
     {
         $artist = $this->service->findBySlug(new Slug('uniclas'));
         self::assertInstanceOf(Artist::class, $artist);
-        self::assertCount(16, $artist->getMusics());
-        self::assertSame("Som do Sonho", $artist->getMusics()[12]->getName());
-        self::assertSame("som-do-sonho", (string)$artist->getMusics()[12]->getSlug());
+        $musics = $artist->getMusics();
+        self::assertCount(16, $musics);
+        self::assertContains("Som do Sonho", array_map(function($music) { return (string)$music->getName(); }, $musics));
+        self::assertContains("som-do-sonho", array_map(function($music) { return (string)$music->getSlug(); }, $musics));
     }
 }
