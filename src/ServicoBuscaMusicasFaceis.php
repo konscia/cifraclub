@@ -1,13 +1,11 @@
 <?php
 
-namespace Konscia\CifraClub\Application;
+namespace Konscia\CifraClub\Aplicacao;
 
-use Konscia\CifraClub\Domain\Exceptions\ArtistNotFound;
-use Konscia\CifraClub\Domain\Repositories\ArtistsRepository;
 use Konscia\CifraClub\Domain\Services\ArtistLocator;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
 
-class EasyMusicFinder
+class ServicoBuscaMusicasFaceis
 {
     /**
      * @var ArtistLocator
@@ -31,5 +29,4 @@ class EasyMusicFinder
 
         //Devolve a lista de músicas
     }
-
 }

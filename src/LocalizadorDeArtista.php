@@ -1,14 +1,13 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\Services;
+namespace Konscia\CifraClub;
 
 use Konscia\CifraClub\Domain\CifraClubProxyInterface;
 use Konscia\CifraClub\Domain\Factories\ArtistFactory;
 use Konscia\CifraClub\Domain\Entities\Artist;
 use Konscia\CifraClub\Domain\ValueObjects\Slug;
-use Stash\Interfaces\PoolInterface;
 
-class ArtistLocator
+class LocalizadorDeArtista
 {
     /**
      * @var CifraClubProxyInterface
@@ -21,35 +20,32 @@ class ArtistLocator
     private $factory;
 
     /**
-     * @var PoolInterface
+     * @var Cache
      */
     private $cache;
 
     public function __construct(
         CifraClubProxyInterface $cifraClubProxy,
         ArtistFactory $factory,
-        PoolInterface $cache
+        Cache $cache
     ) {
         $this->cifraClubProxy = $cifraClubProxy;
         $this->factory = $factory;
         $this->cache = $cache;
     }
 
-    public function findBySlug(Slug $slug) : Artist
+    public function encontraPeloSlug(Slug $slug) : Artist
     {
-        $item = $this->cache->getItem('artist.'.$slug);
+        $chave = 'artist.'.$slug;
 
-        if($item->isHit()) {
-            return $item->get();
+        if($this->cache->temItemEmCachePara($chave)) {
+            return $this->cache->pegaItem($chave);
         }
 
         $page = $this->cifraClubProxy->getArtistPage($slug);
         $artist = $this->factory->createFromSlugAndHtmlCifraClub($slug, $page);
 
-        $item->set($artist);
-        $item->expiresAfter(new \DateInterval('P1M'));
-        $this->cache->save($item);
-
+        $this->cache->salva($chave, $artist);
         return $artist;
     }
 }
