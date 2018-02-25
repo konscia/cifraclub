@@ -2,12 +2,7 @@
 
 namespace Konscia\CifraClub;
 
-use Konscia\CifraClub\Domain\CifraClubProxyInterface;
-use Konscia\CifraClub\Domain\Factories\ArtistFactory;
-use Konscia\CifraClub\Domain\Entities\Artist;
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
-
-class LocalizadorDeArtista
+class LocalizadorDeArtistas
 {
     /**
      * @var CifraClubProxyInterface
@@ -15,7 +10,7 @@ class LocalizadorDeArtista
     private $cifraClubProxy;
 
     /**
-     * @var ArtistFactory
+     * @var ArtistaFactory
      */
     private $factory;
 
@@ -26,7 +21,7 @@ class LocalizadorDeArtista
 
     public function __construct(
         CifraClubProxyInterface $cifraClubProxy,
-        ArtistFactory $factory,
+        ArtistaFactory $factory,
         Cache $cache
     ) {
         $this->cifraClubProxy = $cifraClubProxy;
@@ -34,16 +29,16 @@ class LocalizadorDeArtista
         $this->cache = $cache;
     }
 
-    public function encontraPeloSlug(Slug $slug) : Artist
+    public function encontraPeloSlug(Slug $slug) : Artista
     {
-        $chave = 'artist.'.$slug;
+        $chave = 'artista.'.$slug;
 
         if($this->cache->temItemEmCachePara($chave)) {
             return $this->cache->pegaItem($chave);
         }
 
-        $page = $this->cifraClubProxy->getArtistPage($slug);
-        $artist = $this->factory->createFromSlugAndHtmlCifraClub($slug, $page);
+        $page = $this->cifraClubProxy->paginaArtista($slug);
+        $artist = $this->factory->criaInstanciaAPartirDoSlugEdoHtml($page, $slug);
 
         $this->cache->salva($chave, $artist);
         return $artist;

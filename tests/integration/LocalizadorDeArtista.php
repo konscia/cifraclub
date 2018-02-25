@@ -1,33 +1,30 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\Services;
+namespace Konscia\CifraClub\Services;
 
 use Konscia\CifraClub\Cache;
-use Konscia\CifraClub\Domain\Factories\ArtistFactory;
-use Konscia\CifraClub\Domain\Entities\Artist;
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
-use Konscia\CifraClub\Infrastructure\CifraClubProxyImpl;
-use Konscia\CifraClub\LocalizadorDeArtista;
+use Konscia\CifraClub\ArtistaFactory;
+use Konscia\CifraClub\Artista;
+use Konscia\CifraClub\Slug;
+use Konscia\CifraClub\CifraClubProxyImpl;
+use Konscia\CifraClub\LocalizadorDeArtistas;
 use PHPUnit\Framework\TestCase;
-use Stash\Driver\Ephemeral;
-use Stash\Pool;
 
 class LocalizadorDeArtistaTest extends TestCase
 {
     /**
-     * @var LocalizadorDeArtista
+     * @var LocalizadorDeArtistas
      */
     private $service;
 
     protected function setUp()
     {
-        $mockCache = self::getMockBuilder(Cache::class)
-            ->disableOriginalConstructor()
-            ->getMock();
+        /** @var Cache $mockCache */
+        $mockCache = self::getMockBuilder(Cache::class)->disableOriginalConstructor()->getMock();
 
-        $this->service = new LocalizadorDeArtista(
+        $this->service = new LocalizadorDeArtistas(
             new CifraClubProxyImpl(),
-            new ArtistFactory(),
+            new ArtistaFactory(),
             $mockCache
         );
     }
@@ -36,14 +33,14 @@ class LocalizadorDeArtistaTest extends TestCase
     {
         $artist = $this->service->encontraPeloSlug(new Slug('lulu-santos'));
 
-        self::assertInstanceOf(Artist::class, $artist);
+        self::assertInstanceOf(Artista::class, $artist);
         self::assertEquals($artist->getName(), "Lulu Santos");
     }
 
     public function testEncontraPeloSlugTrazAsMusicasDoArtista()
     {
         $artist = $this->service->encontraPeloSlug(new Slug('uniclas'));
-        $musics = $artist->getMusics();
+        $musics = $artist->getMusicas();
 
         self::assertCount(16, $musics);
         self::assertContains("Som do Sonho", array_map(function($music) { return (string)$music->getName(); }, $musics));

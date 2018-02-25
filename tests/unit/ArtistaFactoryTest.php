@@ -1,22 +1,20 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\Factories;
+namespace Konscia\CifraClub;
 
-use Konscia\CifraClub\Domain\Entities\Artist;
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
 use PHPUnit\Framework\TestCase;
 use voku\helper\HtmlDomParser;
 
-class ArtistFactoryTest extends TestCase
+class ArtistaFactoryTest extends TestCase
 {
     /**
-     * @var ArtistFactory
+     * @var ArtistaFactory
      */
     private $factory;
 
     public function setUp()
     {
-        $this->factory = new ArtistFactory();
+        $this->factory = new ArtistaFactory();
     }
 
     public function testCreateFromHtml()
@@ -33,16 +31,16 @@ class ArtistFactoryTest extends TestCase
             </ol>
         ");
 
-        $artist = $this->factory->createFromSlugAndHtmlCifraClub($slug, $html);
+        $artist = $this->factory->criaInstanciaAPartirDoSlugEdoHtml($html, $slug);
 
-        self::assertInstanceOf(Artist::class, $artist);
+        self::assertInstanceOf(Artista::class, $artist);
         self::assertEquals($slug, $artist->getSlug());
         self::assertEquals('Lulu Santos', $artist->getName());
 
-        $musics = $artist->getMusics();
+        $musics = $artist->getMusicas();
         self::assertCount(2, $musics);
         self::assertEquals("musica2", $musics[1]->getSlug());
-        self::assertEquals("Música 2", $musics[1]->getName());
-        self::assertSame($artist, $musics[1]->getArtist());
+        self::assertEquals("Música 2", $musics[1]->getNome());
+        self::assertSame($artist, $musics[1]->getArtista());
     }
 }

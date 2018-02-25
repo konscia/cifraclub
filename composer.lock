@@ -8,7 +8,7 @@
     "content-hash": "719960dae74e40987801e412d259b147",
     "packages": [
         {
-            "name": "ircmaxell/password-compat",
+            "nome": "ircmaxell/password-compat",
             "version": "v1.0.4",
             "source": {
                 "type": "git",
@@ -36,7 +36,7 @@
             ],
             "authors": [
                 {
-                    "name": "Anthony Ferrara",
+                    "nome": "Anthony Ferrara",
                     "email": "ircmaxell@php.net",
                     "homepage": "http://blog.ircmaxell.com"
                 }
@@ -50,7 +50,7 @@
             "time": "2014-11-20 16:49:30"
         },
         {
-            "name": "paragonie/random_compat",
+            "nome": "paragonie/random_compat",
             "version": "v2.0.10",
             "source": {
                 "type": "git",
@@ -84,7 +84,7 @@
             ],
             "authors": [
                 {
-                    "name": "Paragon Initiative Enterprises",
+                    "nome": "Paragon Initiative Enterprises",
                     "email": "security@paragonie.com",
                     "homepage": "https://paragonie.com"
                 }
@@ -98,7 +98,7 @@
             "time": "2017-03-13 16:27:32"
         },
         {
-            "name": "psr/cache",
+            "nome": "psr/cache",
             "version": "1.0.1",
             "source": {
                 "type": "git",
@@ -131,7 +131,7 @@
             ],
             "authors": [
                 {
-                    "name": "PHP-FIG",
+                    "nome": "PHP-FIG",
                     "homepage": "http://www.php-fig.org/"
                 }
             ],
@@ -144,7 +144,7 @@
             "time": "2016-08-06 20:24:11"
         },
         {
-            "name": "symfony/css-selector",
+            "nome": "symfony/css-selector",
             "version": "v3.3.9",
             "source": {
                 "type": "git",
@@ -180,15 +180,15 @@
             ],
             "authors": [
                 {
-                    "name": "Jean-François Simon",
+                    "nome": "Jean-François Simon",
                     "email": "jeanfrancois.simon@sensiolabs.com"
                 },
                 {
-                    "name": "Fabien Potencier",
+                    "nome": "Fabien Potencier",
                     "email": "fabien@symfony.com"
                 },
                 {
-                    "name": "Symfony Community",
+                    "nome": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
@@ -197,7 +197,7 @@
             "time": "2017-07-29 21:54:42"
         },
         {
-            "name": "symfony/intl",
+            "nome": "symfony/intl",
             "version": "v3.3.9",
             "source": {
                 "type": "git",
@@ -243,19 +243,19 @@
             ],
             "authors": [
                 {
-                    "name": "Bernhard Schussek",
+                    "nome": "Bernhard Schussek",
                     "email": "bschussek@gmail.com"
                 },
                 {
-                    "name": "Eriksen Costa",
+                    "nome": "Eriksen Costa",
                     "email": "eriksen.costa@infranology.com.br"
                 },
                 {
-                    "name": "Igor Wiedler",
+                    "nome": "Igor Wiedler",
                     "email": "igor@wiedler.ch"
                 },
                 {
-                    "name": "Symfony Community",
+                    "nome": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
@@ -272,7 +272,7 @@
             "time": "2017-08-27 14:52:21"
         },
         {
-            "name": "symfony/polyfill",
+            "nome": "symfony/polyfill",
             "version": "v1.5.0",
             "source": {
                 "type": "git",
@@ -346,11 +346,11 @@
             ],
             "authors": [
                 {
-                    "name": "Nicolas Grekas",
+                    "nome": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
                 {
-                    "name": "Symfony Community",
+                    "nome": "Symfony Community",
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
@@ -365,7 +365,7 @@
             "time": "2017-08-16 07:33:06"
         },
         {
-            "name": "tedivm/stash",
+            "nome": "tedivm/stash",
             "version": "v0.14.2",
             "source": {
                 "type": "git",
@@ -402,11 +402,11 @@
             ],
             "authors": [
                 {
-                    "name": "Robert Hafner",
+                    "nome": "Robert Hafner",
                     "email": "tedivm@tedivm.com"
                 },
                 {
-                    "name": "Josh Hall-Bachner",
+                    "nome": "Josh Hall-Bachner",
                     "email": "charlequin@gmail.com"
                 }
             ],
@@ -425,7 +425,7 @@
             "time": "2017-04-23 17:16:57"
         },
         {
-            "name": "voku/portable-utf8",
+            "nome": "voku/portable-utf8",
             "version": "3.1.25",
             "source": {
                 "type": "git",
@@ -470,15 +470,15 @@
             ],
             "authors": [
                 {
-                    "name": "Hamid Sarfraz",
+                    "nome": "Hamid Sarfraz",
                     "homepage": "http://pageconfig.com/"
                 },
                 {
-                    "name": "Lars Moelleken",
+                    "nome": "Lars Moelleken",
                     "homepage": "http://www.moelleken.org/"
                 },
                 {
-                    "name": "Nicolas Grekas",
+                    "nome": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 }
             ],
@@ -495,7 +495,7 @@
             "time": "2017-08-05 00:21:32"
         },
         {
-            "name": "voku/simple_html_dom",
+            "nome": "voku/simple_html_dom",
             "version": "3.1.2",
             "source": {
                 "type": "git",
@@ -528,12 +528,12 @@
             ],
             "authors": [
                 {
-                    "name": "Lars Moelleken",
+                    "nome": "Lars Moelleken",
                     "homepage": "http://www.moelleken.org/",
                     "role": "Developer"
                 },
                 {
-                    "name": "dimabdc",
+                    "nome": "dimabdc",
                     "email": "support@titor.ru",
                     "homepage": "http://github.com/dimabdc",
                     "role": "Developer"
@@ -551,7 +551,7 @@
     ],
     "packages-dev": [
         {
-            "name": "doctrine/instantiator",
+            "nome": "doctrine/instantiator",
             "version": "1.0.5",
             "source": {
                 "type": "git",
@@ -591,7 +591,7 @@
             ],
             "authors": [
                 {
-                    "name": "Marco Pivetta",
+                    "nome": "Marco Pivetta",
                     "email": "ocramius@gmail.com",
                     "homepage": "http://ocramius.github.com/"
                 }
@@ -605,7 +605,7 @@
             "time": "2015-06-14 21:17:01"
         },
         {
-            "name": "myclabs/deep-copy",
+            "nome": "myclabs/deep-copy",
             "version": "1.6.1",
             "source": {
                 "type": "git",
@@ -647,7 +647,7 @@
             "time": "2017-04-12 18:52:22"
         },
         {
-            "name": "phar-io/manifest",
+            "nome": "phar-io/manifest",
             "version": "1.0.1",
             "source": {
                 "type": "git",
@@ -683,17 +683,17 @@
             ],
             "authors": [
                 {
-                    "name": "Arne Blankerts",
+                    "nome": "Arne Blankerts",
                     "email": "arne@blankerts.de",
                     "role": "Developer"
                 },
                 {
-                    "name": "Sebastian Heuer",
+                    "nome": "Sebastian Heuer",
                     "email": "sebastian@phpeople.de",
                     "role": "Developer"
                 },
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
                     "role": "Developer"
                 }
@@ -702,7 +702,7 @@
             "time": "2017-03-05 18:14:27"
         },
         {
-            "name": "phar-io/version",
+            "nome": "phar-io/version",
             "version": "1.0.1",
             "source": {
                 "type": "git",
@@ -730,17 +730,17 @@
             ],
             "authors": [
                 {
-                    "name": "Arne Blankerts",
+                    "nome": "Arne Blankerts",
                     "email": "arne@blankerts.de",
                     "role": "Developer"
                 },
                 {
-                    "name": "Sebastian Heuer",
+                    "nome": "Sebastian Heuer",
                     "email": "sebastian@phpeople.de",
                     "role": "Developer"
                 },
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
                     "role": "Developer"
                 }
@@ -749,7 +749,7 @@
             "time": "2017-03-05 17:38:23"
         },
         {
-            "name": "phpdocumentor/reflection-common",
+            "nome": "phpdocumentor/reflection-common",
             "version": "1.0.1",
             "source": {
                 "type": "git",
@@ -787,7 +787,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jaap van Otterdijk",
+                    "nome": "Jaap van Otterdijk",
                     "email": "opensource@ijaap.nl"
                 }
             ],
@@ -803,7 +803,7 @@
             "time": "2017-09-11 18:02:19"
         },
         {
-            "name": "phpdocumentor/reflection-docblock",
+            "nome": "phpdocumentor/reflection-docblock",
             "version": "4.1.1",
             "source": {
                 "type": "git",
@@ -840,7 +840,7 @@
             ],
             "authors": [
                 {
-                    "name": "Mike van Riel",
+                    "nome": "Mike van Riel",
                     "email": "me@mikevanriel.com"
                 }
             ],
@@ -848,7 +848,7 @@
             "time": "2017-08-30 18:51:59"
         },
         {
-            "name": "phpdocumentor/type-resolver",
+            "nome": "phpdocumentor/type-resolver",
             "version": "0.4.0",
             "source": {
                 "type": "git",
@@ -888,14 +888,14 @@
             ],
             "authors": [
                 {
-                    "name": "Mike van Riel",
+                    "nome": "Mike van Riel",
                     "email": "me@mikevanriel.com"
                 }
             ],
             "time": "2017-07-14 14:27:02"
         },
         {
-            "name": "phpspec/prophecy",
+            "nome": "phpspec/prophecy",
             "version": "v1.7.2",
             "source": {
                 "type": "git",
@@ -936,12 +936,12 @@
             ],
             "authors": [
                 {
-                    "name": "Konstantin Kudryashov",
+                    "nome": "Konstantin Kudryashov",
                     "email": "ever.zet@gmail.com",
                     "homepage": "http://everzet.com"
                 },
                 {
-                    "name": "Marcello Duarte",
+                    "nome": "Marcello Duarte",
                     "email": "marcello.duarte@gmail.com"
                 }
             ],
@@ -958,7 +958,7 @@
             "time": "2017-09-04 11:05:03"
         },
         {
-            "name": "phpunit/php-code-coverage",
+            "nome": "phpunit/php-code-coverage",
             "version": "5.2.2",
             "source": {
                 "type": "git",
@@ -1007,7 +1007,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
@@ -1022,7 +1022,7 @@
             "time": "2017-08-03 12:40:43"
         },
         {
-            "name": "phpunit/php-file-iterator",
+            "nome": "phpunit/php-file-iterator",
             "version": "1.4.2",
             "source": {
                 "type": "git",
@@ -1055,7 +1055,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
@@ -1069,7 +1069,7 @@
             "time": "2016-10-03 07:40:28"
         },
         {
-            "name": "phpunit/php-text-template",
+            "nome": "phpunit/php-text-template",
             "version": "1.2.1",
             "source": {
                 "type": "git",
@@ -1097,7 +1097,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
@@ -1110,7 +1110,7 @@
             "time": "2015-06-21 13:50:34"
         },
         {
-            "name": "phpunit/php-timer",
+            "nome": "phpunit/php-timer",
             "version": "1.0.9",
             "source": {
                 "type": "git",
@@ -1146,7 +1146,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
@@ -1159,7 +1159,7 @@
             "time": "2017-02-26 11:10:40"
         },
         {
-            "name": "phpunit/php-token-stream",
+            "nome": "phpunit/php-token-stream",
             "version": "2.0.1",
             "source": {
                 "type": "git",
@@ -1196,7 +1196,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1208,7 +1208,7 @@
             "time": "2017-08-20 05:47:52"
         },
         {
-            "name": "phpunit/phpunit",
+            "nome": "phpunit/phpunit",
             "version": "6.3.1",
             "source": {
                 "type": "git",
@@ -1277,7 +1277,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
@@ -1292,7 +1292,7 @@
             "time": "2017-09-24 07:25:54"
         },
         {
-            "name": "phpunit/phpunit-mock-objects",
+            "nome": "phpunit/phpunit-mock-objects",
             "version": "4.0.4",
             "source": {
                 "type": "git",
@@ -1337,7 +1337,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sb@sebastian-bergmann.de",
                     "role": "lead"
                 }
@@ -1351,7 +1351,7 @@
             "time": "2017-08-03 14:08:16"
         },
         {
-            "name": "sebastian/code-unit-reverse-lookup",
+            "nome": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",
             "source": {
                 "type": "git",
@@ -1387,7 +1387,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1396,7 +1396,7 @@
             "time": "2017-03-04 06:30:41"
         },
         {
-            "name": "sebastian/comparator",
+            "nome": "sebastian/comparator",
             "version": "2.0.2",
             "source": {
                 "type": "git",
@@ -1434,19 +1434,19 @@
             ],
             "authors": [
                 {
-                    "name": "Jeff Welch",
+                    "nome": "Jeff Welch",
                     "email": "whatthejeff@gmail.com"
                 },
                 {
-                    "name": "Volker Dusch",
+                    "nome": "Volker Dusch",
                     "email": "github@wallbash.com"
                 },
                 {
-                    "name": "Bernhard Schussek",
+                    "nome": "Bernhard Schussek",
                     "email": "bschussek@2bepublished.at"
                 },
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1460,7 +1460,7 @@
             "time": "2017-08-03 07:14:59"
         },
         {
-            "name": "sebastian/diff",
+            "nome": "sebastian/diff",
             "version": "2.0.1",
             "source": {
                 "type": "git",
@@ -1496,11 +1496,11 @@
             ],
             "authors": [
                 {
-                    "name": "Kore Nordmann",
+                    "nome": "Kore Nordmann",
                     "email": "mail@kore-nordmann.de"
                 },
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1512,7 +1512,7 @@
             "time": "2017-08-03 08:09:46"
         },
         {
-            "name": "sebastian/environment",
+            "nome": "sebastian/environment",
             "version": "3.1.0",
             "source": {
                 "type": "git",
@@ -1548,7 +1548,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1562,7 +1562,7 @@
             "time": "2017-07-01 08:51:00"
         },
         {
-            "name": "sebastian/exporter",
+            "nome": "sebastian/exporter",
             "version": "3.1.0",
             "source": {
                 "type": "git",
@@ -1600,23 +1600,23 @@
             ],
             "authors": [
                 {
-                    "name": "Jeff Welch",
+                    "nome": "Jeff Welch",
                     "email": "whatthejeff@gmail.com"
                 },
                 {
-                    "name": "Volker Dusch",
+                    "nome": "Volker Dusch",
                     "email": "github@wallbash.com"
                 },
                 {
-                    "name": "Bernhard Schussek",
+                    "nome": "Bernhard Schussek",
                     "email": "bschussek@2bepublished.at"
                 },
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 },
                 {
-                    "name": "Adam Harvey",
+                    "nome": "Adam Harvey",
                     "email": "aharvey@php.net"
                 }
             ],
@@ -1629,7 +1629,7 @@
             "time": "2017-04-03 13:19:02"
         },
         {
-            "name": "sebastian/global-state",
+            "nome": "sebastian/global-state",
             "version": "2.0.0",
             "source": {
                 "type": "git",
@@ -1668,7 +1668,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1680,7 +1680,7 @@
             "time": "2017-04-27 15:39:26"
         },
         {
-            "name": "sebastian/object-enumerator",
+            "nome": "sebastian/object-enumerator",
             "version": "3.0.3",
             "source": {
                 "type": "git",
@@ -1718,7 +1718,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1727,7 +1727,7 @@
             "time": "2017-08-03 12:35:26"
         },
         {
-            "name": "sebastian/object-reflector",
+            "nome": "sebastian/object-reflector",
             "version": "1.1.1",
             "source": {
                 "type": "git",
@@ -1763,7 +1763,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1772,7 +1772,7 @@
             "time": "2017-03-29 09:07:27"
         },
         {
-            "name": "sebastian/recursion-context",
+            "nome": "sebastian/recursion-context",
             "version": "3.0.0",
             "source": {
                 "type": "git",
@@ -1808,15 +1808,15 @@
             ],
             "authors": [
                 {
-                    "name": "Jeff Welch",
+                    "nome": "Jeff Welch",
                     "email": "whatthejeff@gmail.com"
                 },
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 },
                 {
-                    "name": "Adam Harvey",
+                    "nome": "Adam Harvey",
                     "email": "aharvey@php.net"
                 }
             ],
@@ -1825,7 +1825,7 @@
             "time": "2017-03-03 06:23:57"
         },
         {
-            "name": "sebastian/resource-operations",
+            "nome": "sebastian/resource-operations",
             "version": "1.0.0",
             "source": {
                 "type": "git",
@@ -1858,7 +1858,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de"
                 }
             ],
@@ -1867,7 +1867,7 @@
             "time": "2015-07-28 20:34:47"
         },
         {
-            "name": "sebastian/version",
+            "nome": "sebastian/version",
             "version": "2.0.1",
             "source": {
                 "type": "git",
@@ -1900,7 +1900,7 @@
             ],
             "authors": [
                 {
-                    "name": "Sebastian Bergmann",
+                    "nome": "Sebastian Bergmann",
                     "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
@@ -1910,7 +1910,7 @@
             "time": "2016-10-03 07:35:21"
         },
         {
-            "name": "theseer/tokenizer",
+            "nome": "theseer/tokenizer",
             "version": "1.1.0",
             "source": {
                 "type": "git",
@@ -1941,7 +1941,7 @@
             ],
             "authors": [
                 {
-                    "name": "Arne Blankerts",
+                    "nome": "Arne Blankerts",
                     "email": "arne@blankerts.de",
                     "role": "Developer"
                 }
@@ -1950,7 +1950,7 @@
             "time": "2017-04-07 12:08:54"
         },
         {
-            "name": "webmozart/assert",
+            "nome": "webmozart/assert",
             "version": "1.2.0",
             "source": {
                 "type": "git",
@@ -1987,7 +1987,7 @@
             ],
             "authors": [
                 {
-                    "name": "Bernhard Schussek",
+                    "nome": "Bernhard Schussek",
                     "email": "bschussek@gmail.com"
                 }
             ],

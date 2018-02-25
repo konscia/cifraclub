@@ -1,10 +1,8 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\Exceptions;
+namespace Konscia\CifraClub;
 
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
-
-class ArtistNotFound extends \DomainException
+class ArtistaNaoEncontradoException extends \DomainException
 {
     public function __construct(Slug $artist)
     {

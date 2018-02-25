@@ -5,13 +5,19 @@ namespace Konscia\CifraClub;
 class Acordes
 {
     /**
-     * @var array
+     * @var string[]
      */
     private $acordes;
 
-    public function __construct(array $acordes)
+    /**
+     * @var Musica
+     */
+    private $musica;
+
+    public function __construct(array $acordes, Musica $musica)
     {
         $this->acordes = $acordes;
+        $this->musica = $musica;
     }
 
     public function getAcordes(): array
@@ -22,6 +28,11 @@ class Acordes
     public function totalAcordes() : int
     {
         return count($this->acordes);
+    }
+
+    public function getMusica(): Musica
+    {
+        return $this->musica;
     }
 
     public function __toString()

@@ -1,6 +1,6 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\ValueObjects;
+namespace Konscia\CifraClub;
 
 class Slug
 {

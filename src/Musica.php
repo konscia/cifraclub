@@ -5,39 +5,39 @@ namespace Konscia\CifraClub;
 class Musica
 {
     /**
+     * @var Artista
+     */
+    private $artista;
+
+    /**
+     * @var Slug
+     */
+    private $slug;
+
+    /**
      * @var string
      */
     private $nome;
 
-    /**
-     * @var string
-     */
-    private $url;
-
-    /**
-     * @var Acordes
-     */
-    private $acordes;
-
-    public function __construct(string $nome, string $url, Acordes $acordes)
+    public function __construct(Artista $artist, Slug $slug, string $nome)
     {
+        $this->artista = $artist;
         $this->nome = $nome;
-        $this->url = $url;
-        $this->acordes = $acordes;
+        $this->slug = $slug;
     }
 
-    public function getNome()
+    public function getArtista(): Artista
+    {
+        return $this->artista;
+    }
+
+    public function getNome(): string
     {
         return $this->nome;
     }
 
-    public function getUrl()
+    public function getSlug(): Slug
     {
-        return $this->url;
-    }
-
-    public function getAcordes(): Acordes
-    {
-        return $this->acordes;
+        return $this->slug;
     }
 }

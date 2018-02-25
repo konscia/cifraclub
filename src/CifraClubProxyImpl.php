@@ -1,38 +1,37 @@
 <?php
 
-namespace Konscia\CifraClub\Infrastructure;
+namespace Konscia\CifraClub;
 
-use Konscia\CifraClub\Domain\CifraClubProxyInterface;
-use Konscia\CifraClub\Domain\Entities\Music;
-use Konscia\CifraClub\Domain\Exceptions\ArtistNotFound;
-use Konscia\CifraClub\Domain\Exceptions\MusicNotFound;
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
+use Konscia\CifraClub\Musica;
+use Konscia\CifraClub\ArtistaNaoEncontradoException;
+use Konscia\CifraClub\MusicaNaoEncontradaException;
+use Konscia\CifraClub\Slug;
 use voku\helper\HtmlDomParser;
 use voku\helper\SimpleHtmlDomNodeBlank;
 
 class CifraClubProxyImpl implements CifraClubProxyInterface
 {
-    public function getArtistPage(Slug $artist): HtmlDomParser
+    public function paginaArtista(Slug $artist): HtmlDomParser
     {
         $url = $this->url($artist);
         $dom = HtmlDomParser::file_get_html($url);
 
         $elementWithArtistName = $dom->getElementById("span_bread");
         if ($elementWithArtistName instanceof SimpleHtmlDomNodeBlank) {
-            throw new ArtistNotFound($artist);
+            throw new ArtistaNaoEncontradoException($artist);
         }
 
         return $dom;
     }
 
-    public function getMusicPage(Music $music): HtmlDomParser
+    public function paginaMusica(Musica $music): HtmlDomParser
     {
-        $url = $this->url($music->getArtist()->getSlug()."/".$music->getSlug());
+        $url = $this->url($music->getArtista()->getSlug()."/".$music->getSlug());
         $dom = HtmlDomParser::file_get_html($url);
 
         $elementWithMusicName = $dom->find(".cifra h1", 0);
         if ($elementWithMusicName instanceof SimpleHtmlDomNodeBlank) {
-            throw new MusicNotFound($music);
+            throw new MusicaNaoEncontradaException($music);
         }
 
         return $dom;

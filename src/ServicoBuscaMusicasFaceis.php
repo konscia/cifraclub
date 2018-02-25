@@ -2,8 +2,8 @@
 
 namespace Konscia\CifraClub\Aplicacao;
 
-use Konscia\CifraClub\Domain\Services\ArtistLocator;
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
+use Konscia\CifraClub\Services\ArtistLocator;
+use Konscia\CifraClub\ValueObjects\Slug;
 
 class ServicoBuscaMusicasFaceis
 {

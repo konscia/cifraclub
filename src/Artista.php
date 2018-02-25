@@ -1,10 +1,11 @@
 <?php
 
-namespace Konscia\CifraClub\Domain\Entities;
+namespace Konscia\CifraClub;
 
-use Konscia\CifraClub\Domain\ValueObjects\Slug;
+use Konscia\CifraClub\Musica;
+use Konscia\CifraClub\Slug;
 
-class Artist
+class Artista
 {
     /**
      * @var Slug
@@ -17,9 +18,9 @@ class Artist
     private $name;
 
     /**
-     * @var Music[]
+     * @var Musica[]
      */
-    private $musics = [];
+    private $musicas = [];
 
     public function __construct(Slug $slug, string $name)
     {
@@ -28,11 +29,11 @@ class Artist
     }
 
     /**
-     * @param Music[] $musics
+     * @param Musica_old[] $musicas
      */
-    public function setMusics(array $musics)
+    public function setMusicas(array $musicas)
     {
-        $this->musics = $musics;
+        $this->musicas = $musicas;
     }
 
     public function getName(): string
@@ -46,10 +47,10 @@ class Artist
     }
 
     /**
-     * @return Music[]
+     * @return Musica[]
      */
-    public function getMusics(): array
+    public function getMusicas(): array
     {
-        return $this->musics;
+        return $this->musicas;
     }
 }

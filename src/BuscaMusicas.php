@@ -26,7 +26,7 @@ class BuscaMusicas
 
     /**
      * @param $nomeArtista
-     * @return Musica[]
+     * @return Musica_old[]
      */
     public function buscaPorArtista($nomeArtista) : array
     {
@@ -52,7 +52,7 @@ class BuscaMusicas
             }
 
             $acordes = $this->buscadorAcordes->buscaPorMusica($urlMusica);
-            $musicas[] = new Musica($link->innerHtml, $urlMusica, $acordes);
+            $musicas[] = new Musica_old($link->innerHtml, $urlMusica, $acordes);
         }
 
         $item->set($musicas);
@@ -63,7 +63,7 @@ class BuscaMusicas
 
     private function ordenaMusicas(array $musicas)
     {
-        usort($musicas, function (\Konscia\CifraClub\Musica $a, \Konscia\CifraClub\Musica $b) {
+        usort($musicas, function (\Konscia\CifraClub\Musica_old $a, \Konscia\CifraClub\Musica_old $b) {
             $a = $a->getAcordes()->totalAcordes();
             $b = $b->getAcordes()->totalAcordes();
 
